@@ -10,7 +10,17 @@
 	<p>My name is Emily Siu.</p>
 	<p>This page will be awesome in hopefully one month from now.</p>
 
-	<textarea rows="4" cols="50"> Type something... </textarea>
+	<textarea id="myTextArea" rows="4" cols="50"> Type something... </textarea>
+	<button type="button" onclick="myFunction()">Try it</button>
+
+	<p id="demo"></p>
+
+	<script>
+	function myFunction() {
+		var x = document.getElementById("myTextArea").value;
+		document.getElementById("demo").innerHTML = x;
+	}
+	</script>
 </body>
 
 </html>
