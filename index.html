@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
+
+
 <head>
 <title>Emily Lin Siu</title>
 <script>
@@ -9,9 +11,41 @@ function add_goal_name() {
 	document.getElementById("display_goal_name").innerHTML = goal_name;
 }
 
-function add_succeed_by_date() {
-	var succeed_by_date = document.getElementById("get_succeed_by_date").value;
-	document.getElementById("display_succeed_by_date").innerHTML = succeed_by_date;
+function add_date() {
+	var month = document.getElementById("month").value;
+	var day = document.getElementById("day").value;
+	var year = document.getElementById("year").value;
+	var date = month + "." + day + "." + year;
+	document.getElementById("display_date").innerHTML = date;
+}
+
+function add_day() {
+	var month = document.getElementById("month").value;
+	var start = 1;
+	var end = 31;
+	if (month == "04" || month == "06" || month == "09" || month == "11") {
+		end = 30;
+	} else if (month == "02") {
+		end = 29;
+	}
+	var options = "";
+	for (var day = start; day <= end; day++) {
+		if (day < 10) {
+			day = "0" + day;
+		}
+		options += "<option>" + day + "</option>";
+	}
+	document.getElementById("day").innerHTML = options;
+}
+
+function add_year() {
+	var start = 2016;
+	var end = start + 50;
+	var options = "";
+	for (var year = start; year <= end; year++) {
+		options += "<option>" + year + "</option>";
+	}
+	document.getElementById("year").innerHTML = options;
 }
 
 function add_details() {
@@ -26,11 +60,13 @@ function add_tasks() {
 </script>
 </head>
 
+
+
 <!-- STYLING -->
 <style>
 #card {
 	border: 2px solid gray;
-	padding: 15px;
+	padding: 20px;
 	margin: 30px;
 }
 
@@ -46,46 +82,75 @@ p span.date {
 </style>
 
 
+
 <body>
 <h1 title="Hi there">Hello world!</h1>
 <hr>
+
+
 
 <!-- INTRODUCTION -->
 <p>My name is Emily Siu.</p>
 <p>This page will be awesome in hopefully one month from now.</p>
 <hr><br>
 
+
+
 <!-- CARD -->
 <p id="card">
 	<span class="uppercase" id="display_goal_name">Reach typing speed of 100 wpm on average</span>
 	<br><br>
-	Succeed by: <span class="date" id="display_succeed_by_date">September 1st, 2016</span>
+	Succeed by: <span class="date" id="display_date">September 1st, 2016</span>
 	<br><br>
-	Details: <span id="display_details">Work towards 100% accuracy</span>
+	<b>Details:</b> <span id="display_details">Work towards 100% accuracy</span>
 	<br><br>
-	Task: <span id="display_tasks">Play 10 races on TypeRacer</span>
+	<b>Task:</b> <span id="display_tasks">Play 10 races on TypeRacer</span>
 </p>
+
+
 
 <!-- UPDATE GOAL NAME -->
 <p>Please enter the following details of your goal:</p>
 <textarea id="get_goal_name" rows="2" cols="50"> Enter goal name...</textarea><br>
 <button type="button" onclick="add_goal_name()">Update Goal Name</button><br><br>
 
-<!-- UPDATE SUCCEED BY DATE -->
-<textarea id="get_succeed_by_date" rows="2" cols="30"> Enter succeed by date...</textarea><br>
-<button type="button" onclick="add_succeed_by_date()">Update Date</button><br><br>
+
+
+<!-- UPDATE SUCCEED BY DATE // resets days when month changes but idk if that's too bad -->
+<select name="month" id="month" onchange="add_day()" size="1">
+    <option value="01">January</option>
+    <option value="02">February</option>
+    <option value="03">March</option>
+    <option value="04">April</option>
+    <option value="05">May</option>
+    <option value="06">June</option>
+    <option value="07">July</option>
+    <option value="08">August</option>
+    <option value="09">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+</select>
+<select name="day" id="day" onchange="" size="1"><script>add_day()</script></select>
+<select name="year" id="year" onchange="" size="1"><script>add_year()</script></select>
+<button type="button" onclick="add_date()">Update Date</button><br><br>
+
+
 
 <!-- UPDATE DETAILS -->
 <textarea id="get_details" rows="4" cols="50"> Enter details...</textarea><br>
 <button type="button" onclick="add_details()">Update Details</button><br><br>
 
+
+
 <!-- UPDATE TASKS -->
 <textarea id="get_tasks" rows="4" cols="50"> Enter tasks...</textarea><br>
 <button type="button" onclick="add_tasks()">Update Tasks</button><br><br>
 
+
+
 <!-- LINK TO ABOUT ME PAGE -->
 <p><a href="http://emilysiu.github.io/about">About</a></p>
-
 </body>
 
 
