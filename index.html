@@ -14,18 +14,20 @@ function add_goal_name() {
 function add_date() {
 	var month = document.getElementById("month").value;
 	var day = document.getElementById("day").value;
+	day = edit_day_endings(day);
 	var year = document.getElementById("year").value;
-	var date = month + "." + day + "." + year;
+	var date = month + " " + day + ", " + year;
 	document.getElementById("display_date").innerHTML = date;
 }
+
 
 function add_day() {
 	var month = document.getElementById("month").value;
 	var start = 1;
 	var end = 31;
-	if (month == "04" || month == "06" || month == "09" || month == "11") {
+	if (month == "April" || month == "June" || month == "September" || month == "November") {
 		end = 30;
-	} else if (month == "02") {
+	} else if (month == "February") {
 		end = 29;
 	}
 	var options = "";
@@ -36,6 +38,22 @@ function add_day() {
 		options += "<option>" + day + "</option>";
 	}
 	document.getElementById("day").innerHTML = options;
+}
+
+function edit_day_endings(day) {
+	if (day[0] == "0") {
+		day = day[1];
+	}
+	if (day == "1" || day == "21" || day == "31") {
+		day = day + "st";
+	} else if (day == "2" || day == "22") {
+		day = day + "nd";
+	} else if (day == "3" || day == "23") {
+		day = day + "rd";
+	} else {
+		day = day + "th";
+	}
+	return day;
 }
 
 function add_year() {
@@ -118,18 +136,18 @@ p span.date {
 
 <!-- UPDATE SUCCEED BY DATE // resets days when month changes but idk if that's too bad -->
 <select name="month" id="month" onchange="add_day()" size="1">
-    <option value="01">January</option>
-    <option value="02">February</option>
-    <option value="03">March</option>
-    <option value="04">April</option>
-    <option value="05">May</option>
-    <option value="06">June</option>
-    <option value="07">July</option>
-    <option value="08">August</option>
-    <option value="09">September</option>
-    <option value="10">October</option>
-    <option value="11">November</option>
-    <option value="12">December</option>
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="August">August</option>
+    <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+    <option value="December">December</option>
 </select>
 <select name="day" id="day" onchange="" size="1"><script>add_day()</script></select>
 <select name="year" id="year" onchange="" size="1"><script>add_year()</script></select>
