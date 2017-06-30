@@ -1,0 +1,50 @@
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header .logo {
+  padding: 1.25em 0;
+  float: left;
+}
+
+header .logo, header .logo-img {
+  width: 8.2022em;
+}
+
+header ul {
+  float: right;
+  list-style: none;
+  padding: 1.25em 0 0 0;
+  text-align: center;
+  color: #ffefc8;
+  font: .75em Dosis;
+  letter-spacing: .03125em;
+}
+
+header ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 5px;
+  font-size: 150%;
+}
+
+body {
+  background-image:url("img/texture.png");
+}
+
+img.logo-img {
+	magin-left: 10px;
+  width: 75px;
+  height: 75px;
+}
+
+
+.footer {
+  height: 3em;
+  background: #565b70;
+  text-align: center;
+  color: #ffefc8;
+}

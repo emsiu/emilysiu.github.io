@@ -1,177 +1,28 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Emily Lin Siu</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href="http://fonts.googleapis.com/css?family=Dosis|C" rel="stylesheet" type="text/css">
+  </head>
 
-
-
-<head>
-<title>Emily Lin Siu</title>
-<script>
-function add_goal_name() {
-	var goal_name = document.getElementById("get_goal_name").value;
-	document.getElementById("display_goal_name").innerHTML = goal_name;
-}
-
-function add_date() {
-	var month = document.getElementById("month").value;
-	var day = document.getElementById("day").value;
-	day = edit_day_endings(day);
-	var year = document.getElementById("year").value;
-	var date = month + " " + day + ", " + year;
-	document.getElementById("display_date").innerHTML = date;
-}
-
-
-function add_day() {
-	var month = document.getElementById("month").value;
-	var start = 1;
-	var end = 31;
-	if (month == "April" || month == "June" || month == "September" || month == "November") {
-		end = 30;
-	} else if (month == "February") {
-		end = 29;
-	}
-	var options = "";
-	for (var day = start; day <= end; day++) {
-		if (day < 10) {
-			day = "0" + day;
-		}
-		options += "<option>" + day + "</option>";
-	}
-	document.getElementById("day").innerHTML = options;
-}
-
-function edit_day_endings(day) {
-	if (day[0] == "0") {
-		day = day[1];
-	}
-	if (day == "1" || day == "21" || day == "31") {
-		day = day + "st";
-	} else if (day == "2" || day == "22") {
-		day = day + "nd";
-	} else if (day == "3" || day == "23") {
-		day = day + "rd";
-	} else {
-		day = day + "th";
-	}
-	return day;
-}
-
-function add_year() {
-	var start = 2016;
-	var end = start + 50;
-	var options = "";
-	for (var year = start; year <= end; year++) {
-		options += "<option>" + year + "</option>";
-	}
-	document.getElementById("year").innerHTML = options;
-}
-
-function add_details() {
-	var details = document.getElementById("get_details").value;
-	document.getElementById("display_details").innerHTML = details;
-}
-
-function add_tasks() {
-	var tasks = document.getElementById("get_tasks").value;
-	document.getElementById("display_tasks").innerHTML = tasks;
-}
-</script>
-</head>
-
-
-
-<!-- STYLING -->
-<style>
-#card {
-	border: 2px solid gray;
-	padding: 20px;
-	margin: 30px;
-}
-
-p span.uppercase {
-	text-transform: uppercase;
-	font-family: "Arial Black";
-	font-size: 20px;
-}
-
-p span.date {
-	font-style: italic;	
-}
-</style>
-
-
-
-<body>
-<h1 title="Hi there">Hello world!</h1>
-<hr>
-
-
-
-<!-- INTRODUCTION -->
-<p>My name is Emily Siu.</p>
-<p>This page will be awesome in hopefully one month from now.</p>
-<hr><br>
-
-
-
-<!-- CARD -->
-<p id="card">
-	<span class="uppercase" id="display_goal_name">Reach typing speed of 100 wpm on average</span>
-	<br><br>
-	Succeed by: <span class="date" id="display_date">September 1st, 2016</span>
-	<br><br>
-	<b>Details:</b> <span id="display_details">Work towards 100% accuracy</span>
-	<br><br>
-	<b>Task:</b> <span id="display_tasks">Play 10 races on TypeRacer</span>
-</p>
-
-
-
-<!-- UPDATE GOAL NAME -->
-<p>Please enter the following details of your goal:</p>
-<textarea id="get_goal_name" rows="2" cols="50"> Enter goal name...</textarea><br>
-<button type="button" onclick="add_goal_name()">Update Goal Name</button><br><br>
-
-
-
-<!-- UPDATE SUCCEED BY DATE // resets days when month changes but idk if that's too bad -->
-<select name="month" id="month" onchange="add_day()" size="1">
-    <option value="January">January</option>
-    <option value="February">February</option>
-    <option value="March">March</option>
-    <option value="April">April</option>
-    <option value="May">May</option>
-    <option value="June">June</option>
-    <option value="July">July</option>
-    <option value="August">August</option>
-    <option value="September">September</option>
-    <option value="October">October</option>
-    <option value="November">November</option>
-    <option value="December">December</option>
-</select>
-<select name="day" id="day" onchange="" size="1"><script>add_day()</script></select>
-<select name="year" id="year" onchange="" size="1"><script>add_year()</script></select>
-<button type="button" onclick="add_date()">Update Date</button><br><br>
-
-
-
-<!-- UPDATE DETAILS -->
-<textarea id="get_details" rows="4" cols="50"> Enter details...</textarea><br>
-<button type="button" onclick="add_details()">Update Details</button><br><br>
-
-
-
-<!-- UPDATE TASKS -->
-<textarea id="get_tasks" rows="4" cols="50"> Enter tasks...</textarea><br>
-<button type="button" onclick="add_tasks()">Update Tasks</button><br><br>
-
-
-
-<!-- LINK TO ABOUT ME PAGE -->
-<p><a href="http://emilysiu.github.io/about">About</a></p>
-</body>
-
-
-
+  <body>
+		<div class="wrapper">
+			<header>
+				<div class="banner">
+					<div class="logo">
+						<a href="index.html">
+							<img class="logo-img" src="img/emsiu.png" alt="Emsiu logo">
+						</a>
+					</div>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div>
+			</header>
+		</div>
+  </body>
 
 </html>
