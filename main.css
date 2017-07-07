@@ -30,7 +30,7 @@ header {
 }
 
 header .logo {
-  padding: 1.25em 0;
+  padding: 0.25em 0;
   float: left;
   width: 8.2022em;
 }
@@ -58,7 +58,26 @@ header ul li {
   font-size: 150%;
 }
 
+.topic, .content {
+  padding: 15px 0;
+}
+
+.content {
+  background: #C3A047;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
 .footer {
+  padding: 15px 0;
   position: relative;
   height: 3em;
   background: #A07D35;
