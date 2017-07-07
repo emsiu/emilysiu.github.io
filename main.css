@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+head {
+  display: none;
+}
+
+html, body {
+  height: 100%;
+  background-image:url("img/texture.png");
+  color: #333;
+  overflow: auto;
+}
+
+header {
+  background: #EBCA78;
+  height: 20%;
+  width: 100%;
+}
+
+
+.banner {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100%;
+  overflow: auto;
+}
+
+header .logo {
+  padding: 1.25em 0;
+  float: left;
+  width: 8.2022em;
+}
+
+img.logo-img {
+	margin-left: 10px;
+  width: 75px;
+  height: 75px;
+}
+
+header ul {
+  float: right;
+  list-style: none;
+  padding: 1.25em 0 0 0;
+  text-align: center;
+  color: #ffefc8;
+  font: .75em Dosis;
+  letter-spacing: .03125em;
+}
+
+header ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 5px;
+  font-size: 150%;
+}
+
+.footer {
+  position: relative;
+  height: 3em;
+  background: #A07D35;
+  text-align: center;
+}
