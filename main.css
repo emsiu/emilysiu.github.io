@@ -1,17 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
-.container {
+head {
+  display: none;
+}
+
+html, body {
+  height: 100%;
+  background-image:url("img/texture.png");
+  color: #333;
+}
+
+header {
+  background: #565b70;
+  width: 100%;
+}
+
+.banner {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
+  height: 100%;
 }
 
 header .logo {
   padding: 1.25em 0;
   float: left;
+  width: 8.2022em;
 }
 
-header .logo, header .logo-img {
-  width: 8.2022em;
+img.logo-img {
+	margin-left: 10px;
+  width: 75px;
+  height: 75px;
 }
 
 header ul {
@@ -31,18 +54,9 @@ header ul li {
   font-size: 150%;
 }
 
-body {
-  background-image:url("img/texture.png");
-}
-
-img.logo-img {
-	magin-left: 10px;
-  width: 75px;
-  height: 75px;
-}
-
-
 .footer {
+  position: relative;
+  bottom: -100%;
   height: 3em;
   background: #565b70;
   text-align: center;
