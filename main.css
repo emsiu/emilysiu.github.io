@@ -20,7 +20,6 @@ header {
   width: 100%;
 }
 
-
 .banner {
   width: 90%;
   max-width: 900px;
@@ -76,10 +75,34 @@ h1 {
   text-align: center;
 }
 
+.dark-gold {
+  background: #A07D25;
+}
+
+.gold {
+  background: #C3A047;
+}
+
+.lighter-blue-text {
+  color: #B1CCD7;
+}
+
+.light-blue {
+  background: #7AA2B3;
+}
+
+.blue-text {
+  color: #4F7F94;
+}
+
+.dark-blue-text {
+  color: #30647B;
+}
+
 .footer {
   padding: 15px 0;
   position: relative;
   height: 3em;
-  background: #A07D35;
+  background: #EBCA78;
   text-align: center;
 }
