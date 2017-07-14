@@ -8,7 +8,7 @@ header {
   width: 100%;
   min-height: auto;
   text-align: center;
-  background: #EBCA78;
+  /*background: #EBCA78;*/
 }
 
 header .header-content {
@@ -21,7 +21,7 @@ header .header-content {
 
 html, body {
   height: 100%;
-  background-image:url("img/texture.png");
+  /*background-image:url("img/texture.png");*/
   color: #333;
   overflow: auto;
 }
@@ -89,6 +89,14 @@ h1 {
   background: #C3A047;
 }
 
+.white-text {
+  color: #FFFFFF;
+}
+
+.lighter-blue {
+  background: #B1CCD7;
+}
+
 .lighter-blue-text {
   color: #B1CCD7;
 }
@@ -97,18 +105,38 @@ h1 {
   background: #7AA2B3;
 }
 
+.light-blue-text {
+  color: #7AA2B3;
+}
+
+.blue {
+  background: #4F7F94;
+}
+
 .blue-text {
   color: #4F7F94;
+}
+
+.dark-blue {
+  background: #30647B;
+}
+
+.darker-blue {
+  background: #09384D;
 }
 
 .dark-blue-text {
   color: #30647B;
 }
 
+.faded-text {
+    color: rgba(255,255,255,.7);
+}
+
 .footer {
   padding: 15px 0;
   position: relative;
   height: 3em;
-  background: #EBCA78;
+  background: #222;
   text-align: center;
 }
