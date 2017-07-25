@@ -3,21 +3,15 @@
   padding: 0;
 }
 
-header {
-  position: relative;
-  width: 100%;
-  min-height: auto;
-  text-align: center;
-  /*background: #EBCA78;*/
-}
-
 header .header-content {
   position: relative;
   width: 100%;
   padding: 100px 15px;
   text-align: center;
+  background-image: url("img/iceland.jpg");
+  background-size: 125%;
+  background-position: center;
 }
-
 
 html, body {
   height: 100%;
@@ -26,49 +20,8 @@ html, body {
   overflow: auto;
 }
 
-.banner {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-  height: 100%;
-  overflow: auto;
-}
-
-header .logo {
-  padding: 0.25em 0;
-  float: left;
-  width: 8.2022em;
-}
-
-img.logo-img {
-	margin-left: 10px;
-  width: 75px;
-  height: 75px;
-}
-
-header ul {
-  float: right;
-  list-style: none;
-  padding: 1.25em 0 0 0;
-  text-align: center;
-  color: #ffefc8;
-  font: .75em Dosis;
-  letter-spacing: .03125em;
-}
-
-header ul li {
-  display: inline-block;
-  list-style-type: none;
-  padding: 5px;
-  font-size: 150%;
-}
-
 .container, .content {
   padding: 15px 0;
-}
-
-.content {
-  background: #C3A047;
 }
 
 .container {
@@ -77,66 +30,10 @@ header ul li {
   margin: 0 auto;
 }
 
-h1 {
-  text-align: center;
-}
-
-.dark-gold {
-  background: #A07D25;
-}
-
-.gold {
-  background: #C3A047;
-}
-
-.white-text {
-  color: #FFFFFF;
-}
-
-.lighter-blue {
-  background: #B1CCD7;
-}
-
-.lighter-blue-text {
-  color: #B1CCD7;
-}
-
-.light-blue {
-  background: #7AA2B3;
-}
-
-.light-blue-text {
-  color: #7AA2B3;
-}
-
-.blue {
-  background: #4F7F94;
-}
-
-.blue-text {
-  color: #4F7F94;
-}
-
-.dark-blue {
-  background: #30647B;
-}
-
-.darker-blue {
-  background: #09384D;
-}
-
-.dark-blue-text {
-  color: #30647B;
-}
-
-.faded-text {
-    color: rgba(255,255,255,.7);
-}
-
 .footer {
   padding: 15px 0;
   position: relative;
   height: 3em;
-  background: #222;
+  background: #ccc;
   text-align: center;
 }
