@@ -5,31 +5,50 @@
   <meta charset="UTF-8">
   <title>Emily Lin Siu</title>
 
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <link href="http://fonts.googleapis.com/css?family=Dosis|C" rel="stylesheet" type="text/css">
+  <a name="top"></a>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Dosis|C" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <link rel="text/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrapmin.min.js" />
 </head>
 
 <body>
 
-  <nav id="main-nav" class="navbar navbar-right">
-    <a href="#page-top">Emsiu</a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-    </ul>
+  <nav class="navbar navbar-default navbar-fixed-top affix-top">
+    <div class="container-fluid">
+
+      <!-- Header -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#top">Emily Lin Siu</a>
+      </div>
+
+      <!-- Items -->
+      <div class="collapse navbar-collapse" id="topNavBar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="#about">About</a>
+          </li>
+          <li class="">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="">
+            <a href="#education">Education</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
   </nav>
 
-  <header>
-    <div class="header-content">
-      <div class="header-content-inner">
-        <h1>Header name</h1>
-        <hr>
-        <p>Software engineer</p>
-        <a href="#about">About me</a>
-      </div>
-    </div>
-  </header>
+  <div class="page-hero">
+    <img src="img/iceland.jpg" class="page-hero-img">
+  </div>
 
   <section id="about">
     <div class="darker-blue">
