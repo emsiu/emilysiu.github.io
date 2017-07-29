@@ -5,20 +5,54 @@
 
 .navbar {
   border-radius: 0;
+  background: transparent;
 }
 
-.page-hero-img {
-  position: relative;
-  width: 100%;
-  height: auto;
-  background-repeat: no-repeat;
+.navbar-brand {
+  font-family: Oxygen, sans-serif;
+  letter-spacing: 1px;
+}
+
+.navbar ul li {
+  font-family: Oxygen, sans-serif;
 }
 
 body {
   height: 100%;
   color: #333;
   overflow: auto;
-  padding-top: 50px;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  text-align: center;
+  color: white;
+}
+
+.bg {
+  background-color: white;
+  background-image: url("img/colorado.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 960px;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+h1 {
+  font-family: Open Sans, sans-serif;
+}
+
+.all-caps {
+  text-transform: uppercase;
 }
 
 .container, .content {
@@ -32,9 +66,21 @@ body {
 }
 
 .footer {
-  padding: 15px 0;
-  position: relative;
-  height: 3em;
-  background: #ccc;
+  height: 75px;
   text-align: center;
+  background: gray;
+}
+
+.fa.fa-linkedin, .fa.fa-github {
+  font-size: 32px;
+  color:white;
+  margin: 5px;
+}
+
+.fa.fa-linkedin:hover, .fa.fa-github:hover {
+  color: yellow;
+}
+
+a.social {
+  text-decoration: none;
 }
