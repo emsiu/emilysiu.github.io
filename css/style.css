@@ -116,7 +116,7 @@ HEADER
 ***********************************/
 
 .header {
-  background: url('../img/pano.jpg') no-repeat fixed;
+  background: url('../img/pano.JPG') no-repeat fixed;
   background-size: cover;
   height: 100vh;
   position: relative;
