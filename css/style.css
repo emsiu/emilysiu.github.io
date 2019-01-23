@@ -486,10 +486,11 @@ TESTIMONIAL
 ************************************
 ***********************************/
 
-#testimonial {
+#idk {
   background: url('../img/bg.jpg') no-repeat;
   background-size: cover;
   min-height: 390px;
+  color: white;
 }
 
 .bg-testicolor {
