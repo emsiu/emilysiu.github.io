@@ -5,6 +5,11 @@
     Author URL: https://bootstrapmade.com
 */
 
+.note {
+  font-size: 14px;
+  font-style: italic;
+}
+
 body {
   line-height: 1.4;
   font-family: 'Roboto', sans-serif;
