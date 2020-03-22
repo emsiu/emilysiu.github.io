@@ -10,6 +10,24 @@
   font-style: italic;
 }
 
+.about-img img:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.about-img img {
+  opacity: 0.8;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
 body {
   line-height: 1.4;
   font-family: 'Roboto', sans-serif;
