@@ -300,6 +300,10 @@ features
   margin-bottom: 15px;
 }
 
+.item-img img {
+  max-height: 48px;
+}
+
 .sub-title {
   font-size: 20px;
 }
